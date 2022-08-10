@@ -22,6 +22,16 @@ class Todo extends Component {
             todo: ''
         })
     }
+
+    deleteHandler = () => {
+      
+    }
+
+    ClearAllHandler = () => {
+      this.setState({
+        todos: []
+      })
+    }
   render() {
     console.log(this.state);
     return (
@@ -30,8 +40,10 @@ class Todo extends Component {
         value = {this.state.todo}
         handleChange = {this.changeHandler}
         addTodo = {this.addTodo}/>
-        <List
-        lists = {this.state.todos}/>
+        <List 
+        lists = {this.state.todos}
+        handleDelete = {this.deleteHandler}
+        handleClear = {this.ClearAllHandler}/>
       </div>
     )
   }

@@ -2,21 +2,23 @@ import React from 'react'
 import Classes from '../TodoLists/Lists.module.css'
 
 const Lists = (props) => {
-    let todoList = props.todos.map(item => {
-        return <li className= {Classes.ListItem}>{item}</li>
+    let todoList = props.lists.map(item => {
+        return <li className= {Classes.ListItem}
+        >{item} <h4 className= {Classes.Delete}
+        onClick = {props.handleDelete}>x</h4>
+        </li>
 
     })
   return (
     <div className= {Classes.TodoList}>
-        <h2>Todo Lists..</h2>
+        <h2 className= {Classes.Header}>Todo List..</h2>
         <ul className= {Classes.Ulist}>
-            <li className= {Classes.ListItem}>Go home</li>
-            <li className= {Classes.ListItem}>Go market</li>
-            <li className= {Classes.ListItem}>Go school</li>
-            
-
+            {todoList}
         </ul>
-      
+        <button type= 'button' 
+        className= {Classes.Button}
+        onClick={props.handleClear}
+        >Clear All</button>
     </div>
   )
 }

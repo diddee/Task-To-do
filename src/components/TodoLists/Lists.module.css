@@ -1,13 +1,46 @@
 .TodoList{
     position: relative;
     width: 70%;
-    height: 20%;
+    margin-top: 22%;
     background-color: #04041c;
     box-shadow: 2px 5px 5px rgba(0,0,0,0.7);
     color: white;
-    text-align: center;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 15px 0;
+}
+.Header{
+    text-align: center;
+}
+.Ulist{
+    list-style: none;
+}
+.ListItem{
+    position: relative;
+    font: x-large bold;
+    background-color: #616190;
+    margin: 1rem 30px 1rem 0px;
+    padding: 10px;
+    border-radius: 7px;
+}
+.Button{
+    color: white;
+    background-color: red;
+    border-radius: 7px;
+    height: 35%;
+    width: 20%;
+    padding: 7px;
+    font: larger bolder;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.Delete{
+    background-color: red;
+    position: absolute;
+    top: -50%;
+    left: 90%;
+    width: 4%;
+    text-align: center;
 }
