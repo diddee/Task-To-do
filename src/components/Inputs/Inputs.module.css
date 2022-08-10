@@ -1,0 +1,41 @@
+.Inputs{
+    position: relative;
+    width: 70%;
+    height: 20%;
+    background-color: #04041c;
+    box-shadow: 2px 5px 5px rgba(0,0,0,0.7);
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Input{
+    border: none;
+    width: 60%;
+    height: 30%;
+    background-color: #04041c;
+    border-bottom: 1px solid #616091;
+    border-left: 1px solid #616091;
+    border-radius: 10px;
+    font: x-large bold;
+    padding-left: 10px;
+    color: white;
+
+}
+.Button{
+    border: none;
+    background-color: #616091;
+    border-radius: 8px;
+    color: white;
+    border-bottom: 1px solid #616091;
+    border-left: 1px solid #616091;
+    font: x-large bold;
+    width: 10%;
+    height: 32%;
+    margin-top: 1rem;
+
+
+
+}

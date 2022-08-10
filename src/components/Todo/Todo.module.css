@@ -1,0 +1,15 @@
+.Todo{
+    position: relative;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #616091;
+
+;
+}
+
+
+/* .app{background-color: #616091 #04041c;} */ 
