@@ -37,6 +37,43 @@
     height: 32%;
     margin-top: .5rem;
 
-
-
 }
+
+@media screen and (max-width: 950px){
+    .Inputs{
+        width: 73%;
+        height: 11%;
+    }
+    .Input{
+        width: 70%;
+        font: xx-large bold;
+    }
+    .Button{
+        font: x-large bold;
+        width: 15%;
+        height: 37%;
+        margin-top: .5rem;
+    
+    }
+}
+    
+@media screen and (max-width: 700px){
+    .Inputs{
+        width: 90%;
+        height: 10%;
+    }
+    .Input{
+        width: 65%;
+        height: 35%;
+
+        font: xx-large bold;
+    }
+    .Button{
+        font: larger bold;
+        width: 20%;
+        height: 40%;
+        margin-top: .5rem;
+    
+    }
+}
+    
