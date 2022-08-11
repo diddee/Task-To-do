@@ -3,10 +3,10 @@ import Classes from '../TodoLists/Lists.module.css'
 
 const Lists = (props) => {
     let todoList = props.lists.map(item => {
-        return <li className= {Classes.ListItem}
-        >{item} <h4 className= {Classes.Delete}
-        onClick = {props.handleDelete}>x</h4>
-        </li>
+        return <li className= {Classes.ListItem} key={props.id}>
+                  {item} 
+                  <h4 className={Classes.Delete} onClick={props.handleDelete}>x</h4>
+                </li>
 
     })
   return (

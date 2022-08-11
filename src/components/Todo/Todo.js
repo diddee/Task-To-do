@@ -13,18 +13,19 @@ class Todo extends Component {
             todo: e.target.value
         })
     }
-    addTodo = () => {
-        let newTodo= this.state.todo
+    addTodo = (newTodo) => {
+        newTodo.id = Math.random()
         const allTodos = [...this.state.todos, newTodo]
 
+        console.log(newTodo.id);
         this.setState({
             todos: allTodos,
-            todo: ''
         })
     }
 
     deleteHandler = () => {
-      
+      const list = [...this.state.todos]
+      list.splice(0, 1)
     }
 
     ClearAllHandler = () => {
@@ -41,8 +42,9 @@ class Todo extends Component {
         handleChange = {this.changeHandler}
         addTodo = {this.addTodo}/>
         <List 
+        // id = {newTodo.id}
         lists = {this.state.todos}
-        handleDelete = {this.deleteHandler}
+        handleDelete = {() => this.deleteHandler}
         handleClear = {this.ClearAllHandler}/>
       </div>
     )
