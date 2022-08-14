@@ -6,26 +6,43 @@ import Classes from "./Todo.module.css"
 class Todo extends Component {
     state = {
         todos: [],
-        todo: ''
+        todo: '',
+        id: ''
     }
     changeHandler = (e) => {
         this.setState({
             todo: e.target.value
         })
     }
-    addTodo = (newTodo) => {
-        newTodo.id = Math.random()
+    addTodo = () => {
+        const todoId = Math.random()
+        const todo = [...this.state.todo] 
+        let newTodo= this.state.todo
         const allTodos = [...this.state.todos, newTodo]
 
-        console.log(newTodo.id);
-        this.setState({
+        if (todo.length === 0) {
+          
+          this.setState({
+            todo: 'Please add a task to do!'
+          })
+        }else{
+          this.setState({
             todos: allTodos,
+            todo: '',
+            id: todoId
         })
+        }
+      
     }
 
-    deleteHandler = () => {
-      const list = [...this.state.todos]
-      list.splice(0, 1)
+    deleteHandler = (key) => {
+      const newList = [...this.state.todos]
+      newList.splice(key, 1)
+
+      this.setState({
+        todos: newList
+      })
+    
     }
 
     ClearAllHandler = () => {
@@ -34,7 +51,8 @@ class Todo extends Component {
       })
     }
   render() {
-    console.log(this.state);
+    
+    // console.log(this.state);
     return (
       <div className= {Classes.Todo}>
         <Input
@@ -42,9 +60,9 @@ class Todo extends Component {
         handleChange = {this.changeHandler}
         addTodo = {this.addTodo}/>
         <List 
-        // id = {newTodo.id}
+        key = {this.state.id}
         lists = {this.state.todos}
-        handleDelete = {() => this.deleteHandler}
+        handleDelete = {this.deleteHandler}
         handleClear = {this.ClearAllHandler}/>
       </div>
     )
