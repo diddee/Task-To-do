@@ -14,6 +14,8 @@ class Todo extends Component {
             todo: e.target.value
         })
     }
+    // adding a todo item
+
     addTodo = () => {
         const todoId = Math.random()
         const todo = [...this.state.todo] 
@@ -34,7 +36,7 @@ class Todo extends Component {
         }
       
     }
-
+    // deleting a todo item
     deleteHandler = (key) => {
       const newList = [...this.state.todos]
       newList.splice(key, 1)
@@ -43,8 +45,10 @@ class Todo extends Component {
         todos: newList
       })
     
-    }
+    } 
 
+    // deleting all existing todo items
+    
     ClearAllHandler = () => {
       this.setState({
         todos: []
