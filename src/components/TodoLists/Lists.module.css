@@ -20,9 +20,11 @@
 }
 .ListItem{
     position: relative;
-    font: x-large bold;
+    font-size: x-large ;
+    font-weight: 600;
     background-color: #616190;
     margin: 1rem 30px 1rem 0px;
+    color: black;
     padding: 10px;
     border-radius: 7px;
 }
@@ -32,7 +34,7 @@
     border-radius: 7px;
     height: 35%;
     width: 20%;
-    padding: 7px;
+    padding: 7px 0 10px 0;
     font: x-large bolder;
     margin: 0 auto;
     cursor: pointer;
